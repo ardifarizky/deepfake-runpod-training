@@ -1,0 +1,33 @@
+{
+  "data": {
+    "old_index": "/workspace/data/index_v2.csv",
+    "sdxl_manifest": "/workspace/data/sdxl_external.csv",
+    "image_root": "/workspace/data",
+    "cache_dir": "/workspace/cache",
+    "expected_inventory_images": 342120
+  },
+  "output_dir": "/workspace/outputs",
+  "training": {
+    "epochs": 4,
+    "batch_size": 128,
+    "workers": 12,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "warmup_steps": 1000,
+    "seed": 42,
+    "image_size": 224,
+    "amp": true,
+    "channels_last": true,
+    "early_stopping_patience": 2,
+    "eval_every_epochs": 1,
+    "gradient_clip_norm": 1.0
+  },
+  "models": {
+    "efficientnet": "efficientnet_b0.ra_in1k",
+    "swin": "swin_tiny_patch4_window7_224.ms_in1k"
+  },
+  "external": {
+    "enabled": true,
+    "never_train": true
+  }
+}
